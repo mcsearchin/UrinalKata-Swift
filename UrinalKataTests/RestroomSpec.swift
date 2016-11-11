@@ -96,6 +96,24 @@ class RestroomSpec: QuickSpec {
                         }
                     }
                 }
+                
+                context("when the middle urinal is occupied") {
+                    beforeEach {
+                        subject.occupyUrinal(at: 1)
+                    }
+                    
+                    it("chooses to wait") {
+                        expect(subject.bestUrinalChoice).to(equal(UrinalChoice.wait))
+                    }
+                    
+                    context("and there is a line") {
+                        it("chooses the middle urinal") {
+                            subject.otherDudesAreWaiting = true
+                            
+                            expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 1)))
+                        }
+                    }
+                }
             }
         }
     }

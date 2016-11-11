@@ -14,7 +14,10 @@ class Restroom {
         
         for (index, urinal) in urinals.enumerated().reversed() {
             if !urinal.occupied &&
-                (index == urinals.count - 1 || !urinals[index + 1].occupied || otherDudesAreWaiting) {
+                    (urinals.count == 1 ||
+                    (index == urinals.count - 1 && !urinals[index - 1].occupied) ||
+                    (index == 0 && !urinals[index + 1].occupied) ||
+                    otherDudesAreWaiting) {
                 
                 choice = .pee(atUrinal: index)
                 break
