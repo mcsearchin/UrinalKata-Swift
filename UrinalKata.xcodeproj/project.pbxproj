@@ -18,6 +18,7 @@
 		443A80181DD5516D006BC377 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 443A80131DD5510A006BC377 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		443A80191DD5516D006BC377 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 443A80141DD5510A006BC377 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		443A801B1DD55545006BC377 /* Restroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A801A1DD55545006BC377 /* Restroom.swift */; };
+		443A801D1DD57B75006BC377 /* UrinalChoiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A801C1DD57B75006BC377 /* UrinalChoiceSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		443A80131DD5510A006BC377 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		443A80141DD5510A006BC377 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		443A801A1DD55545006BC377 /* Restroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restroom.swift; sourceTree = "<group>"; };
+		443A801C1DD57B75006BC377 /* UrinalChoiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrinalChoiceSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				443A80071DD54DE2006BC377 /* RestroomSpec.swift */,
+				443A801C1DD57B75006BC377 /* UrinalChoiceSpec.swift */,
 				443A80091DD54DE2006BC377 /* Info.plist */,
 			);
 			path = UrinalKataTests;
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443A801D1DD57B75006BC377 /* UrinalChoiceSpec.swift in Sources */,
 				443A80081DD54DE2006BC377 /* RestroomSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
