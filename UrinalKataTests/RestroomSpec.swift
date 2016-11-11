@@ -36,10 +36,20 @@ class RestroomSpec: QuickSpec {
                 }
                 
                 context("when the furthest urinal is occupied") {
-                    it("chooses to wait") {
+                    beforeEach {
                         subject.occupyUrinal(at: 1)
-                        
+                    }
+                    
+                    it("chooses to wait") {
                         expect(subject.bestUrinalChoice).to(equal(UrinalChoice.wait))
+                    }
+                    
+                    context("and there is a line") {
+                        it("chooses the next closest urinal") {
+                            subject.lineToPee = true
+                            
+                            expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 0)))
+                        }
                     }
                 }
             }
