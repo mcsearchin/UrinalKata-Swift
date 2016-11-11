@@ -15,8 +15,16 @@ class Restroom {
 
 enum UrinalChoice: Equatable {
     case pee(atUrinal: Int)
+    case wait
 }
 
 func ==(first: UrinalChoice, second: UrinalChoice) -> Bool {
-    return true
+    switch (first, second) {
+    case (let .pee(firstUrinal), let .pee(secondUrinal)):
+        return firstUrinal == secondUrinal
+    case (.wait, .wait):
+        return true
+    default:
+        return false
+    }
 }
