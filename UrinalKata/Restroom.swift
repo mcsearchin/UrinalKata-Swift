@@ -2,14 +2,18 @@ import Foundation
 
 class Restroom {
     
-    let urinalCount: Int
+    var urinalCount: Int
     
     init(withUrinalCount urinalCount: Int) {
         self.urinalCount = urinalCount
     }
     
-    var bestChoiceUrinal: Int {
-        return urinalCount - 1
+    var bestUrinalChoice: UrinalChoice {
+        return urinalCount > 0 ? .pee(atUrinal: urinalCount - 1) : .wait
+    }
+    
+    func occupyUrinal(at index: Int) {
+        urinalCount -= 1
     }
 }
 
