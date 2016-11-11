@@ -46,9 +46,53 @@ class RestroomSpec: QuickSpec {
                     
                     context("and there is a line") {
                         it("chooses the next closest urinal") {
-                            subject.lineToPee = true
+                            subject.otherDudesAreWaiting = true
                             
                             expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 0)))
+                        }
+                    }
+                }
+            }
+            
+            context("with three urinals") {
+                beforeEach {
+                    subject = Restroom(withUrinalCount: 3)
+                }
+
+                context("when the furthest urinal is occupied") {
+                    beforeEach {
+                        subject.occupyUrinal(at: 2)
+                    }
+                    
+                    it("chooses the closest urinal") {
+                        expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 0)))
+                    }
+                    
+                    context("and the next urinal is occupied") {
+                        beforeEach {
+                            subject.occupyUrinal(at: 1)
+                        }
+                        
+                        it("chooses to wait") {
+                            expect(subject.bestUrinalChoice).to(equal(UrinalChoice.wait))
+                        }
+                    }
+                    
+                    context("and the closest urinal is occupied") {
+                        beforeEach {
+                            subject.occupyUrinal(at: 0)
+                        }
+                        
+                        it("chooses to wait") {
+                            expect(subject.bestUrinalChoice).to(equal(UrinalChoice.wait))
+                        }
+                        
+                        context("and there is a line") {
+                            it("chooses the middle urinal") {
+                                subject.otherDudesAreWaiting = true
+                                
+                                expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 1)))
+                            }
                         }
                     }
                 }

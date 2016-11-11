@@ -3,18 +3,25 @@ import Foundation
 class Restroom {
     
     private var urinals: [Urinal]
-    var lineToPee: Bool = false
+    var otherDudesAreWaiting: Bool = false
     
     init(withUrinalCount urinalCount: Int) {
         self.urinals = (0..<urinalCount).map { _ in Urinal(occupied: false) }
     }
     
     var bestUrinalChoice: UrinalChoice {
-        if urinals.last!.occupied {
-            return lineToPee ? .pee(atUrinal: 0) : .wait
-        } else {
-            return .pee(atUrinal: urinals.count - 1)
+        var choice: UrinalChoice = .wait
+        
+        for (index, urinal) in urinals.enumerated().reversed() {
+            if !urinal.occupied &&
+                (index == urinals.count - 1 || !urinals[index + 1].occupied || otherDudesAreWaiting) {
+                
+                choice = .pee(atUrinal: index)
+                break
+            }
         }
+        
+        return choice
     }
     
     func occupyUrinal(at index: Int) {
