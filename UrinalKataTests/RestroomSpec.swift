@@ -17,6 +17,16 @@ class RestroomSpec: QuickSpec {
                     expect(subject.chooseNextUrinal()).to(equal(0))
                 }
             }
+            
+            context("with two urinals") {
+                beforeEach {
+                    subject = Restroom(withUrinalCount: 2)
+                }
+                
+                it("chooses the furthest open urinal") {
+                    expect(subject.chooseNextUrinal()).to(equal(1))
+                }
+            }
         }
     }
 }
