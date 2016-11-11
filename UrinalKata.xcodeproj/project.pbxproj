@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		443A7FF31DD54DE2006BC377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A7FF21DD54DE2006BC377 /* AppDelegate.swift */; };
+		443A7FF51DD54DE2006BC377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A7FF41DD54DE2006BC377 /* ViewController.swift */; };
+		443A7FF81DD54DE2006BC377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A7FF61DD54DE2006BC377 /* Main.storyboard */; };
+		443A7FFA1DD54DE2006BC377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443A7FF91DD54DE2006BC377 /* Assets.xcassets */; };
+		443A7FFD1DD54DE2006BC377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A7FFB1DD54DE2006BC377 /* LaunchScreen.storyboard */; };
+		443A80081DD54DE2006BC377 /* RestroomSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A80071DD54DE2006BC377 /* RestroomSpec.swift */; };
+		443A80151DD5510A006BC377 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A80131DD5510A006BC377 /* Nimble.framework */; };
+		443A80161DD5510A006BC377 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A80141DD5510A006BC377 /* Quick.framework */; };
+		443A80181DD5516D006BC377 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 443A80131DD5510A006BC377 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		443A80191DD5516D006BC377 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 443A80141DD5510A006BC377 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		443A801B1DD55545006BC377 /* Restroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A801A1DD55545006BC377 /* Restroom.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		443A80041DD54DE2006BC377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 443A7FE71DD54DE2006BC377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 443A7FEE1DD54DE2006BC377;
+			remoteInfo = UrinalKata;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		443A80171DD55147006BC377 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				443A80181DD5516D006BC377 /* Nimble.framework in CopyFiles */,
+				443A80191DD5516D006BC377 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		443A7FEF1DD54DE2006BC377 /* UrinalKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrinalKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		443A7FF21DD54DE2006BC377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		443A7FF41DD54DE2006BC377 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		443A7FF71DD54DE2006BC377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		443A7FF91DD54DE2006BC377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		443A7FFC1DD54DE2006BC377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		443A7FFE1DD54DE2006BC377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443A80031DD54DE2006BC377 /* UrinalKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrinalKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		443A80071DD54DE2006BC377 /* RestroomSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestroomSpec.swift; sourceTree = "<group>"; };
+		443A80091DD54DE2006BC377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443A80131DD5510A006BC377 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		443A80141DD5510A006BC377 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		443A801A1DD55545006BC377 /* Restroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restroom.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		443A7FEC1DD54DE2006BC377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443A80001DD54DE2006BC377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443A80151DD5510A006BC377 /* Nimble.framework in Frameworks */,
+				443A80161DD5510A006BC377 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		443A7FE61DD54DE2006BC377 = {
+			isa = PBXGroup;
+			children = (
+				443A7FF11DD54DE2006BC377 /* UrinalKata */,
+				443A80061DD54DE2006BC377 /* UrinalKataTests */,
+				443A7FF01DD54DE2006BC377 /* Products */,
+				443A80121DD5510A006BC377 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		443A7FF01DD54DE2006BC377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				443A7FEF1DD54DE2006BC377 /* UrinalKata.app */,
+				443A80031DD54DE2006BC377 /* UrinalKataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		443A7FF11DD54DE2006BC377 /* UrinalKata */ = {
+			isa = PBXGroup;
+			children = (
+				443A7FF21DD54DE2006BC377 /* AppDelegate.swift */,
+				443A7FF41DD54DE2006BC377 /* ViewController.swift */,
+				443A7FF61DD54DE2006BC377 /* Main.storyboard */,
+				443A7FF91DD54DE2006BC377 /* Assets.xcassets */,
+				443A7FFB1DD54DE2006BC377 /* LaunchScreen.storyboard */,
+				443A7FFE1DD54DE2006BC377 /* Info.plist */,
+				443A801A1DD55545006BC377 /* Restroom.swift */,
+			);
+			path = UrinalKata;
+			sourceTree = "<group>";
+		};
+		443A80061DD54DE2006BC377 /* UrinalKataTests */ = {
+			isa = PBXGroup;
+			children = (
+				443A80071DD54DE2006BC377 /* RestroomSpec.swift */,
+				443A80091DD54DE2006BC377 /* Info.plist */,
+			);
+			path = UrinalKataTests;
+			sourceTree = "<group>";
+		};
+		443A80121DD5510A006BC377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				443A80131DD5510A006BC377 /* Nimble.framework */,
+				443A80141DD5510A006BC377 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		443A7FEE1DD54DE2006BC377 /* UrinalKata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443A800C1DD54DE2006BC377 /* Build configuration list for PBXNativeTarget "UrinalKata" */;
+			buildPhases = (
+				443A7FEB1DD54DE2006BC377 /* Sources */,
+				443A7FEC1DD54DE2006BC377 /* Frameworks */,
+				443A7FED1DD54DE2006BC377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UrinalKata;
+			productName = UrinalKata;
+			productReference = 443A7FEF1DD54DE2006BC377 /* UrinalKata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		443A80021DD54DE2006BC377 /* UrinalKataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443A800F1DD54DE2006BC377 /* Build configuration list for PBXNativeTarget "UrinalKataTests" */;
+			buildPhases = (
+				443A7FFF1DD54DE2006BC377 /* Sources */,
+				443A80001DD54DE2006BC377 /* Frameworks */,
+				443A80011DD54DE2006BC377 /* Resources */,
+				443A80171DD55147006BC377 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				443A80051DD54DE2006BC377 /* PBXTargetDependency */,
+			);
+			name = UrinalKataTests;
+			productName = UrinalKataTests;
+			productReference = 443A80031DD54DE2006BC377 /* UrinalKataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		443A7FE71DD54DE2006BC377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = mcsearchin;
+				TargetAttributes = {
+					443A7FEE1DD54DE2006BC377 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					443A80021DD54DE2006BC377 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 443A7FEE1DD54DE2006BC377;
+					};
+				};
+			};
+			buildConfigurationList = 443A7FEA1DD54DE2006BC377 /* Build configuration list for PBXProject "UrinalKata" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 443A7FE61DD54DE2006BC377;
+			productRefGroup = 443A7FF01DD54DE2006BC377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				443A7FEE1DD54DE2006BC377 /* UrinalKata */,
+				443A80021DD54DE2006BC377 /* UrinalKataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		443A7FED1DD54DE2006BC377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443A7FFD1DD54DE2006BC377 /* LaunchScreen.storyboard in Resources */,
+				443A7FFA1DD54DE2006BC377 /* Assets.xcassets in Resources */,
+				443A7FF81DD54DE2006BC377 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443A80011DD54DE2006BC377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		443A7FEB1DD54DE2006BC377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443A7FF51DD54DE2006BC377 /* ViewController.swift in Sources */,
+				443A7FF31DD54DE2006BC377 /* AppDelegate.swift in Sources */,
+				443A801B1DD55545006BC377 /* Restroom.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443A7FFF1DD54DE2006BC377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443A80081DD54DE2006BC377 /* RestroomSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		443A80051DD54DE2006BC377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 443A7FEE1DD54DE2006BC377 /* UrinalKata */;
+			targetProxy = 443A80041DD54DE2006BC377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		443A7FF61DD54DE2006BC377 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				443A7FF71DD54DE2006BC377 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		443A7FFB1DD54DE2006BC377 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				443A7FFC1DD54DE2006BC377 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		443A800A1DD54DE2006BC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		443A800B1DD54DE2006BC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		443A800D1DD54DE2006BC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UrinalKata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcsearchin.UrinalKata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		443A800E1DD54DE2006BC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UrinalKata/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcsearchin.UrinalKata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		443A80101DD54DE2006BC377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UrinalKataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcsearchin.UrinalKataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UrinalKata.app/UrinalKata";
+			};
+			name = Debug;
+		};
+		443A80111DD54DE2006BC377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = UrinalKataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcsearchin.UrinalKataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UrinalKata.app/UrinalKata";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		443A7FEA1DD54DE2006BC377 /* Build configuration list for PBXProject "UrinalKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443A800A1DD54DE2006BC377 /* Debug */,
+				443A800B1DD54DE2006BC377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		443A800C1DD54DE2006BC377 /* Build configuration list for PBXNativeTarget "UrinalKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443A800D1DD54DE2006BC377 /* Debug */,
+				443A800E1DD54DE2006BC377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		443A800F1DD54DE2006BC377 /* Build configuration list for PBXNativeTarget "UrinalKataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443A80101DD54DE2006BC377 /* Debug */,
+				443A80111DD54DE2006BC377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 443A7FE71DD54DE2006BC377 /* Project object */;
+}
