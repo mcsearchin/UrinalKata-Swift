@@ -9,13 +9,13 @@ class Restroom {
     }
     
     var bestUrinalChoice: UrinalChoice {
-        for (index, occupied) in urinals.enumerated().reversed() {
-            if !occupied {
-                return .pee(atUrinal: index)
-            }
-        }
+//        for (index, occupied) in urinals.enumerated().reversed() {
+//            if !occupied {
+//                return .pee(atUrinal: index)
+//            }
+//        }
         
-        return .wait
+        return urinals.last! ? .wait : .pee(atUrinal: urinals.count - 1)
     }
     
     func occupyUrinal(at index: Int) {
