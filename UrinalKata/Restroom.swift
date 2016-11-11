@@ -2,18 +2,24 @@ import Foundation
 
 class Restroom {
     
-    var urinalCount: Int
+    var urinals: [Bool]
     
     init(withUrinalCount urinalCount: Int) {
-        self.urinalCount = urinalCount
+        self.urinals = (0..<urinalCount).map { _ in false }
     }
     
     var bestUrinalChoice: UrinalChoice {
-        return urinalCount > 0 ? .pee(atUrinal: urinalCount - 1) : .wait
+        for (index, occupied) in urinals.enumerated().reversed() {
+            if !occupied {
+                return .pee(atUrinal: index)
+            }
+        }
+        
+        return .wait
     }
     
     func occupyUrinal(at index: Int) {
-        urinalCount -= 1
+        urinals[index] = true
     }
 }
 
