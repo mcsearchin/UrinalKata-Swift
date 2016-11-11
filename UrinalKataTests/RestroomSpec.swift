@@ -14,7 +14,7 @@ class RestroomSpec: QuickSpec {
                 }
                 
                 it("chooses the open urinal") {
-                    expect(subject.chooseNextUrinal()).to(equal(0))
+                    expect(subject.bestChoiceUrinal).to(equal(0))
                 }
             }
             
@@ -24,7 +24,7 @@ class RestroomSpec: QuickSpec {
                 }
                 
                 it("chooses the furthest open urinal") {
-                    expect(subject.chooseNextUrinal()).to(equal(1))
+                    expect(subject.bestChoiceUrinal).to(equal(1))
                 }
             }
         }

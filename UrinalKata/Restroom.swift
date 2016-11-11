@@ -8,7 +8,7 @@ class Restroom {
         self.urinalCount = urinalCount
     }
     
-    func chooseNextUrinal() -> Int {
+    var bestChoiceUrinal: Int {
         return urinalCount - 1
     }
 }
