@@ -107,10 +107,10 @@ class RestroomSpec: QuickSpec {
                     }
                     
                     context("and there is a line") {
-                        it("chooses the middle urinal") {
+                        it("chooses the furthest urinal") {
                             subject.otherDudesAreWaiting = true
                             
-                            expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 1)))
+                            expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 2)))
                         }
                     }
                 }

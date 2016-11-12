@@ -12,15 +12,17 @@ class Restroom {
     var bestUrinalChoice: UrinalChoice {
         var choice: UrinalChoice = .wait
         
+        var previousOccupied: Bool
+        var nextOccupied: Bool
         for (index, urinal) in urinals.enumerated().reversed() {
-            if !urinal.occupied &&
-                    (urinals.count == 1 ||
-                    (index == urinals.count - 1 && !urinals[index - 1].occupied) ||
-                    (index == 0 && !urinals[index + 1].occupied) ||
-                    otherDudesAreWaiting) {
-                
-                choice = .pee(atUrinal: index)
-                break
+            previousOccupied = (index == urinals.count - 1) ? false : urinals[index + 1].occupied
+            nextOccupied = index == 0 ? false : urinals[index - 1].occupied
+            
+            if !urinal.occupied {
+                if otherDudesAreWaiting || !previousOccupied && !nextOccupied {
+                    choice = .pee(atUrinal: index)
+                    break
+                }
             }
         }
         
