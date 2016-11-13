@@ -19,7 +19,7 @@ class RestroomSpec: QuickSpec {
                 
                 context("when the urinal is occupied") {
                     it("chooses to wait") {
-                        subject.occupyUrinal(at: 0)
+                        subject.occupyUrinals(at: 0)
                         
                         expect(subject.bestUrinalChoice).to(equal(UrinalChoice.wait))
                     }
@@ -37,7 +37,7 @@ class RestroomSpec: QuickSpec {
                 
                 context("when the furthest urinal is occupied") {
                     beforeEach {
-                        subject.occupyUrinal(at: 1)
+                        subject.occupyUrinals(at: 1)
                     }
                     
                     it("chooses to wait") {
@@ -61,7 +61,7 @@ class RestroomSpec: QuickSpec {
 
                 context("when the furthest urinal is occupied") {
                     beforeEach {
-                        subject.occupyUrinal(at: 2)
+                        subject.occupyUrinals(at: 2)
                     }
                     
                     it("chooses the closest urinal") {
@@ -70,7 +70,7 @@ class RestroomSpec: QuickSpec {
                     
                     context("and the next urinal is occupied") {
                         beforeEach {
-                            subject.occupyUrinal(at: 1)
+                            subject.occupyUrinals(at: 1)
                         }
                         
                         it("chooses the closest urinal") {
@@ -80,7 +80,7 @@ class RestroomSpec: QuickSpec {
                     
                     context("and the closest urinal is occupied") {
                         beforeEach {
-                            subject.occupyUrinal(at: 0)
+                            subject.occupyUrinals(at: 0)
                         }
                         
                         it("chooses to wait") {
@@ -99,7 +99,7 @@ class RestroomSpec: QuickSpec {
                 
                 context("when the middle urinal is occupied") {
                     beforeEach {
-                        subject.occupyUrinal(at: 1)
+                        subject.occupyUrinals(at: 1)
                     }
                     
                     it("chooses to wait") {
@@ -123,13 +123,28 @@ class RestroomSpec: QuickSpec {
                 
                 context("when the fourth and second urinals are occupied and there is a line") {
                     beforeEach {
-                        subject.occupyUrinal(at: 3)
-                        subject.occupyUrinal(at: 1)
+                        subject.occupyUrinals(at: 3, 1)
                         subject.otherDudesAreWaiting = true
                     }
                     
                     it("chooses the first urinal") {
                         expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 0)))
+                    }
+                }
+            }
+            
+            context("with six urinals") {
+                beforeEach {
+                    subject = Restroom(withUrinalCount: 6)
+                }
+                
+                context("when the sixth, fifth, fourth, and second urinals are occupied") {
+                    beforeEach {
+                        subject.occupyUrinals(at: 5, 4, 3, 1)
+                    }
+                    
+                    it("chooses the third urinal") {
+                        expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 2)))
                     }
                 }
             }

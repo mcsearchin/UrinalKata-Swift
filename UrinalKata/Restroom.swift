@@ -21,7 +21,7 @@ class Restroom {
                 if currentAdjacentDudeCount == 0 {
                     choiceIndex = index
                     break
-                } else if otherDudesAreWaiting || maxAdjacentDudeCount > 0 {
+                } else if otherDudesAreWaiting || maxAdjacentDudeCount == currentAdjacentDudeCount {
                     guard let previousAdjacentDudeCount = adjacentDudeCount else {
                         adjacentDudeCount = currentAdjacentDudeCount
                         choiceIndex = index
@@ -56,9 +56,11 @@ class Restroom {
         }
     }
     
-    func occupyUrinal(at index: Int) {
-        urinals[index].occupied = true
-    }    
+    func occupyUrinals(at indexes: Int...) {
+        for index in indexes {
+            urinals[index].occupied = true
+        }
+    }
 }
 
 struct Urinal {
