@@ -10,32 +10,30 @@ class Restroom {
     }
     
     var bestUrinalChoice: UrinalChoice {
-        var choiceIndex: Int?
-        var adjacentDudeCount: Int?
         let maxAdjacentDudeCount = getMaxAdjacentDudeCount()
+
+        var choice: (index: Int, adjacentDudeCount: Int)?
         
         for (index, urinal) in urinals.enumerated().reversed() {
-            if !urinal.occupied {
-                let currentAdjacentDudeCount = getAdjacentDudeCount(for: index)
-                
-                if currentAdjacentDudeCount == 0 {
-                    choiceIndex = index
-                    break
-                } else if otherDudesAreWaiting || maxAdjacentDudeCount == currentAdjacentDudeCount {
-                    guard let previousAdjacentDudeCount = adjacentDudeCount else {
-                        adjacentDudeCount = currentAdjacentDudeCount
-                        choiceIndex = index
-                        continue
-                    }
-                    if currentAdjacentDudeCount < previousAdjacentDudeCount {
-                        adjacentDudeCount = currentAdjacentDudeCount
-                        choiceIndex = index
-                    }
+            if urinal.occupied { continue }
+            
+            let adjacentDudeCount = getAdjacentDudeCount(for: index)
+            
+            if adjacentDudeCount == 0 {
+                choice = (index: index, adjacentDudeCount: 0)
+                break
+            } else if otherDudesAreWaiting || maxAdjacentDudeCount == adjacentDudeCount {
+                guard let previousAdjacentDudeCount = choice?.adjacentDudeCount else {
+                    choice = (index: index, adjacentDudeCount: adjacentDudeCount)
+                    continue
+                }
+                if adjacentDudeCount < previousAdjacentDudeCount {
+                    choice = (index: index, adjacentDudeCount: adjacentDudeCount)
                 }
             }
         }
         
-        return choiceIndex != nil ? .pee(atUrinal: choiceIndex!) : .wait
+        return choice != nil ? .pee(atUrinal: choice!.index) : .wait
     }
     
     private func getAdjacentDudeCount(for index: Int) -> Int {
