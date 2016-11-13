@@ -12,13 +12,13 @@
 		443A7FF81DD54DE2006BC377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A7FF61DD54DE2006BC377 /* Main.storyboard */; };
 		443A7FFA1DD54DE2006BC377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443A7FF91DD54DE2006BC377 /* Assets.xcassets */; };
 		443A7FFD1DD54DE2006BC377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443A7FFB1DD54DE2006BC377 /* LaunchScreen.storyboard */; };
-		443A80081DD54DE2006BC377 /* RestroomSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A80071DD54DE2006BC377 /* RestroomSpec.swift */; };
 		443A80151DD5510A006BC377 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A80131DD5510A006BC377 /* Nimble.framework */; };
 		443A80161DD5510A006BC377 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A80141DD5510A006BC377 /* Quick.framework */; };
 		443A80181DD5516D006BC377 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 443A80131DD5510A006BC377 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		443A80191DD5516D006BC377 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 443A80141DD5510A006BC377 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		443A801B1DD55545006BC377 /* Restroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A801A1DD55545006BC377 /* Restroom.swift */; };
 		443A801D1DD57B75006BC377 /* UrinalChoiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A801C1DD57B75006BC377 /* UrinalChoiceSpec.swift */; };
+		443A801E1DD7E342006BC377 /* RestroomSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A80071DD54DE2006BC377 /* RestroomSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				443A801D1DD57B75006BC377 /* UrinalChoiceSpec.swift in Sources */,
-				443A80081DD54DE2006BC377 /* RestroomSpec.swift in Sources */,
+				443A801E1DD7E342006BC377 /* RestroomSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

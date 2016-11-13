@@ -115,6 +115,24 @@ class RestroomSpec: QuickSpec {
                     }
                 }
             }
+            
+            context("with four urinals") {
+                beforeEach {
+                    subject = Restroom(withUrinalCount: 4)
+                }
+                
+                context("when the fourth and second urinals are occupied and there is a line") {
+                    beforeEach {
+                        subject.occupyUrinal(at: 3)
+                        subject.occupyUrinal(at: 1)
+                        subject.otherDudesAreWaiting = true
+                    }
+                    
+                    it("chooses the first urinal") {
+                        expect(subject.bestUrinalChoice).to(equal(UrinalChoice.pee(atUrinal: 0)))
+                    }
+                }
+            }
         }
     }
 }

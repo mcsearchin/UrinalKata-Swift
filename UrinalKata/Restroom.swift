@@ -10,23 +10,43 @@ class Restroom {
     }
     
     var bestUrinalChoice: UrinalChoice {
-        var choice: UrinalChoice = .wait
+        var choiceIndex: Int?
+        var adjacentDudeCount: Int?
         
-        var previousOccupied: Bool
-        var nextOccupied: Bool
         for (index, urinal) in urinals.enumerated().reversed() {
-            previousOccupied = (index == urinals.count - 1) ? false : urinals[index + 1].occupied
-            nextOccupied = index == 0 ? false : urinals[index - 1].occupied
-            
             if !urinal.occupied {
-                if otherDudesAreWaiting || !previousOccupied && !nextOccupied {
-                    choice = .pee(atUrinal: index)
+                let currentAdjacentDudeCount = getAdjacentDudeCount(for: index)
+                
+                if currentAdjacentDudeCount == 0 {
+                    choiceIndex = index
                     break
+                } else if otherDudesAreWaiting {
+                    if let previousAdjacentDudeCount = adjacentDudeCount {
+                        if currentAdjacentDudeCount < previousAdjacentDudeCount {
+                            adjacentDudeCount = currentAdjacentDudeCount
+                            choiceIndex = index
+                        }
+                    } else {
+                        adjacentDudeCount = currentAdjacentDudeCount
+                        choiceIndex = index
+                    }
                 }
             }
         }
         
-        return choice
+        return choiceIndex != nil ? .pee(atUrinal: choiceIndex!) : .wait
+    }
+    
+    private func getAdjacentDudeCount(for index: Int) -> Int {
+        var adjacentDudeCount = 2
+        if index == urinals.count - 1 || !urinals[index + 1].occupied {
+            adjacentDudeCount -= 1
+        }
+        if index == 0 || !urinals[index - 1].occupied {
+            adjacentDudeCount -= 1
+        }
+        
+        return adjacentDudeCount
     }
     
     func occupyUrinal(at index: Int) {
