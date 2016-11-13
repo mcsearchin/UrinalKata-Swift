@@ -1,10 +1,5 @@
-ule 1: Get as far away from the door as possible
+## Urinal Kata
 
-Rule 2: Never stand next to another dude
+I hadn't coded in Swift in awhile, so I decided to take a crack at this kata I've heard so much about:
 
-Rule 2, Exception 1: There is a line at the door
-
-Rule 2, Exception 2: Someone else has already broken Rule 2
-
-Rule 3: Never stand next to two other dudes
-
+https://melgrubb.com/2012/01/16/urinal-code-kata/
